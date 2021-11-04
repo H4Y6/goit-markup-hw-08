@@ -1,0 +1,24 @@
+.logo__label {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.17;
+  font-family: Raleway, sans-serif;
+  @include respond-to(d) {
+    font-size: 26px;
+  }
+}
+.logo__label--blue {
+  color: $prime-color;
+}
+
+.logo__label--black {
+  color: #000;
+}
+.logo-label--white {
+  color: #fff;
+}
+.logo {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+}

@@ -1,0 +1,91 @@
+.hero {
+  width: 100%;
+  text-align: center;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-color: #c4c4c4;
+  background-image: $linear-gradient, url(../img/h-m.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: $linear-gradient, url(../img/h-m@2x.jpg);
+  }
+  @include respond-to(t) {
+    background-image: $linear-gradient, url(../img/h-t.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: $linear-gradient, url(../img/h-t@2x.jpg);
+    }
+  }
+  @include respond-to(d) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: $linear-gradient, url(../img/h-d.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: $linear-gradient, url(../img/h-d@2x.jpg);
+    }
+  }
+}
+
+.hero__title {
+  font-weight: 900;
+  font-size: 26px;
+  line-height: (42 / 26);
+  letter-spacing: 0.06em;
+  color: #fff;
+  margin-bottom: 30px;
+  @include respond-to(d) {
+    font-size: 44px;
+    line-height: (60 / 44);
+  }
+}
+
+/* 1x screens, default value, 320x240 image */
+// .box {
+//   width: 320px;
+//   height: 240px;
+//   background-image: url("https://picsum.photos/id/237/320/240");
+//   background-size: 320px 240px;
+// }
+
+/* 2x screens, retina, 640x480 image */
+// @media screen and (min-device-pixel-ratio: 2),
+//   screen and (min-resolution: 192dpi),
+//   screen and (min-resolution: 2dppx) {
+//   .box {
+//     background-image: url("https://picsum.photos/id/237/640/480");
+//   }
+// }
+
+// .hero {
+//   text-align: center;
+//   padding-top: 200px;
+//   padding-bottom: 200px;
+//   background-color: #c4c4c4;
+//   background-image: linear-gradient(
+//       to right,
+//       rgba(47, 48, 58, 0.4) 34%,
+//       rgba(47, 48, 58, 0.2) 66%,
+//       rgba(47, 48, 58, 0.4)
+//     ),
+//     url(../img/h-d.jpg);
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: 1600px 600px;
+// }
+
+// .hero__title {
+//   font-size: $fz4;
+//   font-weight: 900;
+//   line-height: (60 / 44);
+//   letter-spacing: 0.06em;
+//   text-align: center;
+//   color: #fff;
+//   margin-bottom: 30px;
+// }

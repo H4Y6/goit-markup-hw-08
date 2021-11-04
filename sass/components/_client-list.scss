@@ -1,0 +1,38 @@
+.client__title {
+  @extend .deal__title;
+}
+
+.client-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.client__item {
+  height: 92px;
+  width: calc(100% / 2 - 30px);
+
+  @include respond-to(t) {
+    width: 226px;
+  }
+
+  @include respond-to(d) {
+    width: 170px;
+  }
+  margin: 15px;
+}
+
+.client__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+  transition: fill $transition, border-color $transition;
+  &:hover,
+  &:focus {
+    fill: $prime-color;
+    border-color: $prime-color;
+  }
+}

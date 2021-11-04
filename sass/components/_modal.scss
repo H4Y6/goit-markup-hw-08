@@ -1,0 +1,179 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity $transition, visibility $transition;
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  & .modal {
+    transform: scale(-0.1);
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  max-width: 100%;
+  min-height: 581px;
+  padding: 40px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform $transition;
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal__close-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transform: scale(1) rotate(0);
+  fill: #000;
+  background-color: #fff;
+  transition: fill $transition, border-color $transition, transform $transition;
+  &:hover,
+  &:focus {
+    transform: scale(1.6) rotate(1turn);
+    fill: $prime-color;
+    border-color: $prime-color;
+  }
+}
+
+//  --   modal form   --
+
+.form__caption {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  color: $prime-title-color;
+  margin-bottom: 12px;
+}
+
+.modal__form-field {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.modal__form-comment {
+  margin-bottom: 20px;
+}
+.modal__form-policy {
+  margin-bottom: 30px;
+}
+
+.modal__form-policy-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__form-field-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.modal__form-comment-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+}
+
+.modal__form-comment-textarea {
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+  border: none;
+  outline: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: outline-color $transition;
+  &:hover,
+  &:focus {
+    outline-color: $prime-color;
+  }
+}
+
+.modal__form-field-input {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  outline: 1px solid rgba(33, 33, 33, 0.2);
+  border: none;
+  border-radius: 4px;
+  transition: outline-color $transition;
+  &:focus,
+  &:hover {
+    outline-color: $prime-color;
+  }
+}
+
+.modal__form-field-input:hover + .modal__form-field-icon,
+.modal__form-field-input:focus + .modal__form-field-icon {
+  fill: $prime-color;
+}
+
+.modal__form-field-icon {
+  position: absolute;
+  bottom: 20px;
+  left: 12px;
+  transform: translateY(50%);
+  align-self: center;
+  fill: $prime-title-color;
+  transition: fill $transition;
+}
+
+.modal__form-policy-icon {
+  cursor: pointer;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  background-color: #fff;
+  background-image: url(../img/check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  fill: #fff;
+  transition: background-color $transition, border-color $transition;
+}
+.modal__form-policy-link {
+  margin-left: 5px;
+}
+
+.modal__form-policy-checkbox:checked + .modal__form-policy-icon {
+  background-color: $prime-color;
+  border-color: $prime-color;
+}
+
+.modal__form-btn {
+  display: block;
+  margin: auto;
+}

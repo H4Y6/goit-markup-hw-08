@@ -1,0 +1,28 @@
+.address-list {
+  font-style: normal;
+  line-height: 1.5;
+  display: block;
+  margin-bottom: 0;
+  @include respond-to(mt) {
+    text-align: center;
+  }
+}
+
+.address__item {
+  margin-bottom: 9px;
+}
+
+.address__one {
+  color: #fff;
+  text-decoration: none;
+}
+
+.address__link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color $transition;
+  &:hover,
+  &:focus {
+    color: $prime-color;
+  }
+}

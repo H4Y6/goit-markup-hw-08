@@ -1,0 +1,37 @@
+.team {
+  background: #f5f4fa;
+}
+
+.team__title {
+  @extend .deal__title;
+}
+
+.team-list {
+  @include list-positioning();
+}
+
+.team__item {
+  @extend .plan__item;
+  font-size: $fz;
+  line-height: 1.17;
+  text-align: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  overflow: hidden;
+}
+
+.team__item-title {
+  font-size: $fz;
+  margin-bottom: $item-title-gap;
+  font-weight: 500;
+  color: $prime-title-color;
+}
+
+.team__item-text {
+  margin-bottom: 16px;
+}
+
+.team__item-bottom {
+  padding: 30px 32px;
+  background-color: #fff;
+}

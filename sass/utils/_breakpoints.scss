@@ -1,0 +1,17 @@
+$breakpoints: (
+  "m": (
+    min-width: 480px,
+  ),
+  "jm": (
+    max-width: 767px,
+  ),
+  "t": (
+    min-width: 768px,
+  ),
+  "mt": (
+    max-width: 1200px,
+  ),
+  "d": (
+    min-width: 1200px,
+  ),
+) !default;

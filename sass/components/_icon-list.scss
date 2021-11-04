@@ -1,0 +1,26 @@
+.icon-list{
+display: flex;
+justify-content: center;}
+
+.icon__item{
+  margin-right: 10px;
+}
+
+.icon__link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: #AFB1B8;
+  transition: background-color $transition, fill $transition;
+ &:focus, &:hover{
+    fill: #fff;
+    background: $prime-color;
+ }}
+
+.icon__link--dark-theme{
+  fill: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}

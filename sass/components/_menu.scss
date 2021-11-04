@@ -1,0 +1,123 @@
+.nav__menu-list {
+  @include respond-to(t) {
+    display: flex;
+  }
+}
+
+.nav__item {
+  @include respond-to(jm) {
+    margin-bottom: 32px;
+  }
+  @include respond-to(t) {
+    margin-right: 50px;
+  }
+}
+
+.mobile-menu__toggle {
+  top: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  @include respond-to(t) {
+    display: none;
+  }
+}
+
+.mobile-menu__toggle:hover,
+.mobile-menu__toggle:focus {
+  fill: $prime-color;
+}
+.icon-menu,
+.icon-cross {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  right: 15px;
+  top: 10px;
+}
+
+.icon-cross {
+  display: none;
+}
+@include respond-to(jm) {
+  .mobile-menu {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: transform $transition;
+
+    &.is-open + .toggle-list .icon-menu {
+      display: none;
+    }
+    &.is-open + .toggle-list .icon-cross {
+      display: flex;
+    }
+  }
+
+  .mobile-menu.is-open {
+    transform: translateX(0);
+    & ~ .mobile-menu__toggle .icon-menu {
+      display: none;
+    }
+  }
+}
+.mobile-menu {
+  @include respond-to(t) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav {
+  @include respond-to(jm) {
+    margin-bottom: 50vh;
+  }
+
+  @include respond-to(t) {
+    display: flex;
+    margin-left: 19%;
+  }
+  @include respond-to(d) {
+    margin-left: 93px;
+  }
+}
+
+.nav__link {
+  @include respond-to(jm) {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+  @extend %link;
+  color: $prime-title-color;
+  &:focus,
+  &:hover {
+    color: $prime-color;
+  }
+}
+
+.nav__link--current {
+  position: relative;
+  color: $prime-color;
+  &::after {
+    @include respond-to(t) {
+      position: absolute;
+      content: "";
+      width: 100%;
+      background: $prime-color;
+      border-radius: 2px;
+
+      top: 31px;
+    }
+    @include respond-to(d) {
+      top: 41px;
+    }
+  }
+}

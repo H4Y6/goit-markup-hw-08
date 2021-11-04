@@ -1,0 +1,32 @@
+.plan-list {
+  @include list-positioning();
+}
+
+.plan__item-title {
+  @extend %title;
+  text-transform: uppercase;
+  margin-bottom: $item-title-gap;
+}
+
+.plan__item {
+  width: 100%;
+  margin-bottom: 30px;
+  @include respond-to(t) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin: 15px;
+  }
+  @include respond-to(d) {
+    flex-basis: calc(100% / 4 - 30px);
+  }
+}
+
+.plan__item-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
