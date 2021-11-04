@@ -849,6 +849,7 @@ h5 {
 
 .portfolio__card {
   display: block;
+  margin: 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -925,7 +926,7 @@ h5 {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   color: #212121;
   margin-bottom: 4px;
 }

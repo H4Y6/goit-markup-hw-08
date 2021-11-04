@@ -7,6 +7,7 @@
 
 .portfolio__card {
   display: block;
+  margin: 15px;
   @include respond-to(t) {
     display: flex;
     flex-basis: calc(100% / 2 - 30px);
@@ -62,7 +63,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   color: $prime-title-color;
   margin-bottom: 4px;
 }
