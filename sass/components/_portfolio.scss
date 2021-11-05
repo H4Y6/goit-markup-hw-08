@@ -1,19 +1,15 @@
 .portfolio-list {
   @include list-positioning();
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
 }
 
 .portfolio__card {
   display: flex;
-  margin: 15px;
+  margin: $list-gap;
   @include respond-to(t) {
-    flex-basis: calc(100% / 2 - 30px);
-    margin: $list-gap;
+    flex-basis: calc(100% / 2 - #{$list-gap}* 2);
   }
   @include respond-to(d) {
-    flex-basis: calc(100% / 3 - 30px);
+    flex-basis: calc(100% / 3 - #{$list-gap}* 2);
   }
 }
 .portfolio__img {

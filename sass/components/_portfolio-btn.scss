@@ -1,12 +1,14 @@
 .portfolio__btn-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+
   @include respond-to(jm) {
+    justify-content: left;
     margin-bottom: -15px;
     padding-bottom: 40px;
   }
   @include respond-to(t) {
+    justify-content: center;
     margin-bottom: 30px;
   }
   @include respond-to(d) {
