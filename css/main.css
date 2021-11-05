@@ -226,7 +226,7 @@ h5 {
 }
 
 .mobile__social-item {
-  margin-right: 4%;
+  margin-right: 3%;
 }
 
 @media screen and (min-width: 768px) {
@@ -1247,7 +1247,8 @@ h5 {
     left: 0;
     width: 100vw;
     height: 100vh;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     padding: 48px 40px;
     background-color: #fff;
     -webkit-transform: translateY(100%) scale(0.1) rotate(0);
