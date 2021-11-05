@@ -6,10 +6,9 @@
 }
 
 .portfolio__card {
-  display: block;
+  display: flex;
   margin: 15px;
   @include respond-to(t) {
-    display: flex;
     flex-basis: calc(100% / 2 - 30px);
     margin: $list-gap;
   }

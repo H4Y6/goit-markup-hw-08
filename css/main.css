@@ -848,15 +848,14 @@ h5 {
 }
 
 .portfolio__card {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 15px;
 }
 
 @media screen and (min-width: 768px) {
   .portfolio__card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
         flex-basis: calc(100% / 2 - 30px);
     margin: 15px;
@@ -946,15 +945,31 @@ h5 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: -15px -8px;
-  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio__btn-list {
+    margin-bottom: -15px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__btn-list {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__btn-list {
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio__btn {
   min-width: 73px;
   height: 38px;
   padding: 6px 22px;
-  margin: 15px 8px;
   border-radius: 4px;
   border: none;
   cursor: pointer;
@@ -981,6 +996,12 @@ h5 {
 
 .portfolio__item {
   margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio__item {
+    margin-bottom: 15px;
+  }
 }
 
 .icon-list {
