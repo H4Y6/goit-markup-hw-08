@@ -214,9 +214,9 @@ h5 {
 }
 
 .mobile__social-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 @media screen and (min-width: 768px) {
@@ -226,13 +226,18 @@ h5 {
 }
 
 .mobile__social-item {
-  margin-right: 3%;
+  padding: 0 1%;
+  border-right: 1px solid #21212133;
 }
 
 @media screen and (min-width: 768px) {
   .mobile__social-item {
     display: none;
   }
+}
+
+.mobile__social-item--last {
+  padding-left: 1%;
 }
 
 .mobile__social-link {

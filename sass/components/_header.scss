@@ -80,17 +80,22 @@
 }
 
 .mobile__social-list {
-  display: flex;
+  display: inline-flex;
   @include respond-to(t) {
     display: none;
   }
 }
 
 .mobile__social-item {
-  margin-right: 3%;
+  padding: 0 1%;
+  border-right: 1px solid #21212133;
   @include respond-to(t) {
     display: none;
   }
+}
+
+.mobile__social-item--last {
+  padding-left: 1%;
 }
 
 .mobile__social-link {
