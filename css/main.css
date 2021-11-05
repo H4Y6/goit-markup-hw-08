@@ -226,7 +226,7 @@ h5 {
 }
 
 .mobile__social-item {
-  padding: 0 1%;
+  padding: 0 3%;
   border-right: 1px solid #21212133;
 }
 
@@ -237,7 +237,7 @@ h5 {
 }
 
 .mobile__social-item--last {
-  padding-left: 1%;
+  padding-left: 3%;
 }
 
 .mobile__social-link {
@@ -1277,6 +1277,12 @@ h5 {
   }
   .mobile-menu.is-open ~ .mobile-menu__toggle .icon-menu {
     display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .mobile-menu {
+    padding-left: 5px;
   }
 }
 

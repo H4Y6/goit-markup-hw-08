@@ -87,7 +87,8 @@
 }
 
 .mobile__social-item {
-  padding: 0 1%;
+  padding: 0 3%;
+
   border-right: 1px solid #21212133;
   @include respond-to(t) {
     display: none;
@@ -95,7 +96,7 @@
 }
 
 .mobile__social-item--last {
-  padding-left: 1%;
+  padding-left: 3%;
 }
 
 .mobile__social-link {
