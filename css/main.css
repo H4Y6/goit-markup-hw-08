@@ -399,12 +399,6 @@ h5 {
   overflow: hidden;
 }
 
-@media screen and (max-width: 767px) {
-  .team__item {
-    padding-left: 15px;
-  }
-}
-
 .team__item-title {
   font-size: 16px;
   margin-bottom: 10px;
@@ -417,7 +411,6 @@ h5 {
 }
 
 .team__item-bottom {
-  width: 450px;
   padding: 30px 32px;
   background-color: #fff;
 }
