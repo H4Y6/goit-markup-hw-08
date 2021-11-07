@@ -7,9 +7,10 @@
 }
 
 .team-list {
-  @include list-positioning();
+  @include respond-to(t) {
+    @include list-positioning();
+  }
 }
-
 .team__item {
   @extend .plan__item;
   font-size: $fz;
