@@ -55,7 +55,7 @@ h5 {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  min-width: 320px;
+  width: 320px;
   @include respond-to(m) {
     width: 480px;
   }
