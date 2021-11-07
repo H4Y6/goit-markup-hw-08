@@ -20,8 +20,14 @@
     margin-right: 70px;
   }
 }
+
 .footer__logo {
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
+  @include respond-to(d) {
+    justify-content: flex-start;
+  }
 }
 
 //  ---footer join---

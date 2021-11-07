@@ -1,17 +1,24 @@
 .plan-list {
-  @include list-positioning();
+  @include respond-to(t) {
+    @include list-positioning();
+  }
 }
-
 .plan__item-title {
   @extend %title;
+  text-align: center;
   text-transform: uppercase;
   margin-bottom: $item-title-gap;
 }
 
+.plan__item:not(:last-child) {
+  @include respond-to(jm) {
+    margin-bottom: 30px;
+  }
+}
+
 .plan__item {
-  width: 100%;
-  margin: 15px;
   @include respond-to(t) {
+    margin: 15px;
     flex-basis: calc(100% / 2 - 30px);
   }
   @include respond-to(d) {

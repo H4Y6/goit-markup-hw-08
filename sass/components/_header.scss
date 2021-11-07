@@ -1,16 +1,17 @@
-.header__block {
-  display: flex;
-  @include respond-to(jm) {
-    justify-content: space-between;
-  }
-}
 .header {
+  display: flex;
   border-bottom: 1px solid #ececec;
   height: 60px;
-  padding: 16px 0;
   @include respond-to(d) {
     height: 80px;
-    padding: 25px 0;
+  }
+}
+
+.header__block {
+  display: flex;
+  align-items: center;
+  @include respond-to(jm) {
+    justify-content: space-between;
   }
 }
 
@@ -20,7 +21,7 @@
     flex-direction: column-reverse;
   }
   @include respond-to(t) {
-    margin-left: 13%;
+    margin-left: 15%;
   }
   @include respond-to(d) {
     display: flex;
@@ -44,6 +45,9 @@
     margin-bottom: 64px;
   }
   @include respond-to(t) {
+    margin-bottom: 10px;
+  }
+  @include respond-to(d) {
     margin-right: 30px;
   }
 }
@@ -63,7 +67,7 @@
   }
   .header__tel {
     font-weight: 500;
-    font-size: 34px;
+    font-size: 30px;
     line-height: 1.17;
     letter-spacing: 0.02em;
     color: #2196f3;
@@ -88,15 +92,14 @@
 
 .mobile__social-item {
   padding: 0 3%;
-
-  border-right: 1px solid #21212133;
+  border-left: 1px solid #21212133;
   @include respond-to(t) {
     display: none;
   }
 }
 
-.mobile__social-item--last {
-  padding-left: 3%;
+.mobile__social-item--start {
+  padding-right: 3%;
 }
 
 .mobile__social-link {

@@ -14,7 +14,7 @@
 }
 
 .mobile-menu__toggle {
-  top: 10px;
+  display: flex;
   background-color: transparent;
   cursor: pointer;
   border: none;
@@ -28,22 +28,25 @@
 .mobile-menu__toggle:focus {
   fill: $prime-color;
 }
-.icon-menu,
+.icon-menu {
+  display: block;
+}
+
 .icon-cross {
   position: absolute;
   z-index: 1;
   display: block;
-  right: 15px;
+  right: 17px;
   top: 10px;
 }
 
 .icon-cross {
   display: none;
 }
+
 @include respond-to(jm) {
   .mobile-menu {
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
     width: 100vw;
@@ -72,8 +75,8 @@
 }
 
 .mobile-menu {
-  @media screen and (max-width: 400px) {
-    padding-left: 5px;
+  @media screen and (max-width: 376px) {
+    padding-left: 10px;
   }
   @include respond-to(t) {
     display: flex;

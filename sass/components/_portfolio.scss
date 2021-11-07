@@ -1,11 +1,19 @@
 .portfolio-list {
-  @include list-positioning();
+  @include respond-to(t) {
+    @include list-positioning();
+  }
+}
+
+.portfolio__card:not(:last-child) {
+  @include respond-to(jm) {
+    margin-bottom: 30px;
+  }
 }
 
 .portfolio__card {
-  display: flex;
-  margin: $list-gap;
   @include respond-to(t) {
+    display: flex;
+    margin: $list-gap;
     flex-basis: calc(100% / 2 - #{$list-gap}* 2);
   }
   @include respond-to(d) {

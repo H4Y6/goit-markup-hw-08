@@ -79,6 +79,7 @@ h5 {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  min-width: 320px;
 }
 
 @media screen and (min-width: 480px) {
@@ -99,10 +100,27 @@ h5 {
   }
 }
 
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #ececec;
+  height: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    height: 80px;
+  }
+}
+
 .header__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -110,19 +128,6 @@ h5 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-  }
-}
-
-.header {
-  border-bottom: 1px solid #ececec;
-  height: 60px;
-  padding: 16px 0;
-}
-
-@media screen and (min-width: 1200px) {
-  .header {
-    height: 80px;
-    padding: 25px 0;
   }
 }
 
@@ -140,7 +145,7 @@ h5 {
 
 @media screen and (min-width: 768px) {
   .header__contact-list {
-    margin-left: 13%;
+    margin-left: 15%;
   }
 }
 
@@ -178,6 +183,12 @@ h5 {
 
 @media screen and (min-width: 768px) {
   .header__item {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__item {
     margin-right: 30px;
   }
 }
@@ -198,7 +209,7 @@ h5 {
   }
   .header__tel {
     font-weight: 500;
-    font-size: 34px;
+    font-size: 30px;
     line-height: 1.17;
     letter-spacing: 0.02em;
     color: #2196f3;
@@ -227,7 +238,7 @@ h5 {
 
 .mobile__social-item {
   padding: 0 3%;
-  border-right: 1px solid #21212133;
+  border-left: 1px solid #21212133;
 }
 
 @media screen and (min-width: 768px) {
@@ -236,8 +247,8 @@ h5 {
   }
 }
 
-.mobile__social-item--last {
-  padding-left: 3%;
+.mobile__social-item--start {
+  padding-right: 3%;
 }
 
 .mobile__social-link {
@@ -282,13 +293,7 @@ h5 {
 }
 
 .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   text-decoration: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .hero {
@@ -387,7 +392,7 @@ h5 {
 }
 
 .team-list {
-  text-align: center;
+  text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -462,7 +467,21 @@ h5 {
 }
 
 .footer__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__logo {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -821,28 +840,33 @@ h5 {
   margin: auto;
 }
 
-.portfolio-list {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: -15px;
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: -15px;
+  }
 }
 
-.portfolio__card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 15px;
+@media screen and (max-width: 767px) {
+  .portfolio__card:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .portfolio__card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 15px;
     -ms-flex-preferred-size: calc(100% / 2 - 15px* 2);
         flex-basis: calc(100% / 2 - 15px* 2);
   }
@@ -935,8 +959,7 @@ h5 {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
-    margin-bottom: -15px;
-    padding-bottom: 25px;
+    margin-bottom: 25px;
   }
 }
 
@@ -1034,31 +1057,36 @@ h5 {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.plan-list {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: -15px;
+@media screen and (min-width: 768px) {
+  .plan-list {
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: -15px;
+  }
 }
 
 .plan__item-title {
+  text-align: center;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
-.plan__item, .team__item {
-  width: 100%;
-  margin: 15px;
+@media screen and (max-width: 767px) {
+  .plan__item:not(:last-child), .team__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .plan__item, .team__item {
+    margin: 15px;
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
         flex-basis: calc(100% / 2 - 30px);
   }
@@ -1179,6 +1207,7 @@ h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
@@ -1212,7 +1241,9 @@ h5 {
 }
 
 .mobile-menu__toggle {
-  top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: transparent;
   cursor: pointer;
   border: none;
@@ -1231,12 +1262,15 @@ h5 {
   fill: #2196f3;
 }
 
-.icon-menu,
+.icon-menu {
+  display: block;
+}
+
 .icon-cross {
   position: absolute;
   z-index: 1;
   display: block;
-  right: 15px;
+  right: 17px;
   top: 10px;
 }
 
@@ -1247,7 +1281,6 @@ h5 {
 @media screen and (max-width: 767px) {
   .mobile-menu {
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
     width: 100vw;
@@ -1280,9 +1313,9 @@ h5 {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 376px) {
   .mobile-menu {
-    padding-left: 5px;
+    padding-left: 10px;
   }
 }
 
