@@ -103,13 +103,16 @@
 }
 
 .mobile__social-link {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.22;
   letter-spacing: 0.02em;
   text-align: left;
   text-decoration: none;
   color: $prime-color;
+  @include respond-to(m) {
+    font-size: 18px;
+  }
   @include respond-to(t) {
     display: none;
   }

@@ -58,6 +58,9 @@
 .footer__sign-up {
   width: 100%;
   margin-top: 60px;
+  @include respond-to(m) {
+    width: 450px;
+  }
   @include respond-to(d) {
     width: 570px;
   }
