@@ -15,12 +15,15 @@
 
 .deal-list {
   display: flex;
-  justify-content: space-between;
 }
 
 .deal__item {
   position: relative;
-  flex-basis: calc((100% - 60px) / 3);
+  flex-grow: 1;
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .deal__label {
